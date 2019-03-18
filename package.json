@@ -1,0 +1,22 @@
+{
+  "name": "cqKwr9h7",
+  "dependencies": {
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "slate": "0.44.12",
+    "slate-react": "0.21.18",
+    "immutable": "3.8.2",
+    "react-icons-kit": "1.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0",
+    "babel-loader": "^7.0",
+    "babel-preset-env": "*",
+    "babel-preset-react": "*",
+    "webpack": "^2.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w"
+  }
+}
