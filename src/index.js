@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import TextEditor from './components/TextEditor';
-import css from '../style.css';
-import normalize from '../normalize.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import TextEditor from "./components/TextEditor";
+import css from "../style.css";
+import normalize from "../normalize.css";
+
 class Main extends React.Component {
   render() {
     return (
@@ -13,5 +14,5 @@ class Main extends React.Component {
   }
 }
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById("root"));
 module.hot.accept();
