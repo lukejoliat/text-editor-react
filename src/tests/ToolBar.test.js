@@ -1,17 +1,20 @@
 import React from "react";
 import ToolBar from "../components/ToolBar";
-import renderer from "react-test-renderer";
 import initialValue from "../../assets/initialValue";
-import { shallow } from "enzyme";
-test("Link changes the class when hovered", () => {
-  const component = renderer.create(<ToolBar value={initialValue} />);
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+import { mount } from "enzyme";
+
+let ToolBarComponent = null;
+const onIconClick = jest.fn();
+beforeEach(() => {
+  ToolBarComponent = mount(
+    <ToolBar value={initialValue} onIconClick={onIconClick} />
+  );
 });
 
-test("CheckboxWithLabel changes the text after click", () => {
-  // Render a checkbox with label in the document
-  const ToolBarComponent = shallow(<ToolBar value={initialValue} />);
-
+test("Expect toolbar to be defined", () => {
   expect(ToolBarComponent.exists()).toEqual(true);
+});
+
+test("Expect icons to be rendered", () => {
+  expect(ToolBarComponent.find("Icon").length).toBe(2);
 });
